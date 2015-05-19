@@ -1,5 +1,4 @@
 ## Installing [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) on MSU's HPCC
-----------
 *Note: if you are using another computing cluster then the details may differ.*
 
 Begin by load the following modules and ensuring they'll always load on login.
