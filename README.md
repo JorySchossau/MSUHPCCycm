@@ -1,7 +1,7 @@
 ## Installing [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) on MSU's HPCC
 *Note: if you are using another computing cluster then the details may differ.*
 
-Begin by load the following modules and ensuring they'll always load on login.
+Begin by loading the following modules and ensuring they'll always load on login.
 
     echo module load GNU/4.8.2 CMake/3.1.0 Python/2.7.2 Clang >> ~/.bashrc
     source ~/.bashrc # force reload with our new modules
