@@ -10,6 +10,7 @@ Grab a suitable version of Vim and prepare a symbolic link because it will look 
     wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
     tar xfj vim-7.4.tar.bz2
     cd vim74
+    mkdir -p ~/bin
     ln -s /opt/software/Python/2.7.2--GCC-4.4.5/bin/python2.7 /mnt/home/${USER}/bin/python2
 Now build Vim and install to your `~/bin` dir.
 
