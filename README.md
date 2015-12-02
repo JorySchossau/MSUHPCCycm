@@ -3,7 +3,7 @@
 
 Begin by loading the following modules and ensuring they'll always load on login.
 
-    echo module load GNU/4.8.2 CMake/3.1.0 Python/2.7.2 Clang >> ~/.bashrc
+    echo module load GNU/4.8.2 CMake/3.1.0 Python/2.7.2 Clang/3.5svn >> ~/.bashrc
     source ~/.bashrc # force reload with our new modules
 Grab a suitable version of Vim and prepare a symbolic link because it will look for `python2` in your `PATH` during configuration for building.
 
