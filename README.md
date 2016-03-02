@@ -48,6 +48,6 @@ Grab the source code for YCM, perform a manual build, and initialize and install
     cd ycm_build
     cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp -DPYTHON_INCLUDE_DIR=/opt/software/Python/2.7.2--GCC-4.4.5/include -DPYTHON_LIBRARY=/opt/software/Python/2.7.2--GCC-4.4.5/lib/libpython2.7.so -DUSE_CLANG_COMPLETER=1 -DPYTHON_EXECUTABLE=/opt/software/Python/2.7.2--GCC-4.4.5/bin/python -DEXTERNAL_LIBCLANG_PATH=/opt/software/Clang/20140106--GCC-4.8.2/lib/libclang.so
     
-    make ycm_support_libs -j4
+    cmake --build . --target ycm_core
     vim +PluginInstall +qall
 Don't forget to add a copy of [`.ycm_extra_conf.py`](https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py) to each project's source dir, and tweak it.
