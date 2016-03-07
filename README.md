@@ -41,13 +41,13 @@ Grab the source code for YCM, perform a manual build, and initialize and install
 
     git clone https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
     cd ~/.vim/bundle/YouCompleteMe
+    git fetch origin 995e6be4374450e39f4ca9baeccdce696d0c006b
+    git reset --hard FETCH_HEAD
     git submodule update --init --recursive
-    
-    cd ~/.vim/bundle/YouCompleteMe
+    rm -rf ycm_build
     mkdir ycm_build
     cd ycm_build
     cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp -DPYTHON_INCLUDE_DIR=/opt/software/Python/2.7.2--GCC-4.4.5/include -DPYTHON_LIBRARY=/opt/software/Python/2.7.2--GCC-4.4.5/lib/libpython2.7.so -DUSE_CLANG_COMPLETER=1 -DPYTHON_EXECUTABLE=/opt/software/Python/2.7.2--GCC-4.4.5/bin/python -DEXTERNAL_LIBCLANG_PATH=/opt/software/Clang/20140106--GCC-4.8.2/lib/libclang.so
-    
-    cmake --build . --target ycm_core
+    make ycm_support_libs -j4
     vim +PluginInstall +qall
 Don't forget to add a copy of [`.ycm_extra_conf.py`](https://raw.githubusercontent.com/Valloric/ycmd/master/cpp/ycm/.ycm_extra_conf.py) to each project's source dir, and tweak it.
